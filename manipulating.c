@@ -1,5 +1,5 @@
 /*
-Author: Kiara Rina Pelenio, krpelenio@myseneca.ca, #12636121, 01/08/2022, CPR101, Final Project
+Author: Kiara Rina Pelenio, krpelenio@myseneca.ca, #12636121, 08/01/2022, CPR101, Final Project
 manipulating.c : Manipulating
 Purpose: This program manipulates input strings
 */
