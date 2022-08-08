@@ -1,6 +1,6 @@
 // CONVERTING MODULE SOURCE
 /*
-Author: Ron Austin Saguros, rsaguros1@myseneca.ca, 111045225, 31/07/2022, CPR101, Final Project V1
+Author: Ron Austin Saguros, rsaguros1@myseneca.ca, 111045225, 06/08/2022, CPR101, Final Project V2
 converting.c : CONVERTING
 Purpose: This program converts integer numeric strings inputted by the user to an integer value.
 */
@@ -12,8 +12,8 @@ Purpose: This program converts integer numeric strings inputted by the user to a
 // strings and convert a string to an integer value.
 #include "converting.h"
 
-// V1
 void converting(void) {
+	// V1
 	// Display beginning message
 	printf("*** Start of Converting Strings to int Demo ***\n");
 
@@ -38,6 +38,30 @@ void converting(void) {
 		}
 	} while (strcmp(intString, "q") != 0);
 
-	// Display ending message and exit module.
+	// Display ending message for int demo
 	printf("*** End of Converting Strings to int Demo ***\n\n");
+
+	// V2
+	printf("*** Start of Converting Strings to double Demo ***\n");
+
+	char	doubleString[BUFFER_SIZE];
+	double	doubleNumber;
+
+	do {
+		// Prompt user for entry, replacing the new line read by 
+		// fgets with a null terminator
+		printf("Type an double numeric string (q - to quit):\n");
+		fgets(doubleString, BUFFER_SIZE, stdin);
+		doubleString[strlen(doubleString) - 1] = '\0';
+
+		// Check user input, exit if 'q' was entered.  
+		if ((strcmp(doubleString, "q") != 0)) {
+
+			// Convert user entry from numeric string to a double, then display it
+			doubleNumber = atof(doubleString);
+			printf("Converted number is %f\n", doubleNumber);
+		}
+	} while (strcmp(doubleString, "q") != 0);
+
+	printf("*** End of Converting Strings to double Demo ***\n\n");
 }
