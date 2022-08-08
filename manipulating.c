@@ -1,5 +1,5 @@
 /*
-Author: Kiara Rina Pelenio, krpelenio@myseneca.ca, #12636121, 08/01/2022, CPR101, Final Project
+Author: Kiara Rina Pelenio, krpelenio@myseneca.ca, #12636121, 08/03/2022, CPR101, Final Project
 manipulating.c : Manipulating
 Purpose: This program manipulates input strings
 */
@@ -10,6 +10,7 @@ Purpose: This program manipulates input strings
 #include "manipulating.h" 
 /* Contains function prototypes and library declarations */
 
+// V1
 void manipulating(void) {
 /* Purpose: This function concatenates 2 input strings */
 
@@ -19,16 +20,40 @@ void manipulating(void) {
 
 	do {
 		printf("Type the 1st string (q - to quit):\n");
-		fgets(string1, BUFFER_SIZE, stdin);
-		string1[strlen(string1) - 1] = '\0';	// Replace trailing '\n' witn string null terminator
+		fgets(string1, BUFFER_SIZE, stdin);		// Get the 1st string input
+		string1[strlen(string1) - 1] = '\0';	// Add the null terminator in the end of the string
 
 		if ((strcmp(string1, "q") != 0)) {		// If the input is not equal to "quit"
 			printf("Type the 2nd string:\n");
-			fgets(string2, BUFFER_SIZE, stdin);
+			fgets(string2, BUFFER_SIZE, stdin);	// Get the 2nd string input
 			strcat(string1, string2);
 			printf("Concatenated string is \'%s\'\n", string1);
 		}
 	} while (strcmp(string1, "q") != 0);		// Repeat input as long as input is not equal to "quit"
 
 	printf("*** End of Concatenating Strings Demo ***\n");
+
+//V2
+	printf("*** Start of Comparing Strings Demo ***\n");
+	char compare1[BUFFER_SIZE];
+	char compare2[BUFFER_SIZE];
+	int result;
+	do {
+		printf("Type the 1st string to compare (q - to quit):\n");
+		fgets(compare1, BUFFER_SIZE, stdin);	// Get the 1st string input
+		compare1(strlen(compare1) - 1) = '\0';	// Add the null terminator in the end of the string
+		if (strcmp(compare1, "q") != 0) {		// Check if the user wants to exit the program
+			printf("Type the 2nd string to compare:\n");
+			fgets(compare2, BUFFER_SIZE, stdin);	// Get the 2nd string input
+			compare2[strlen(compare2) - 1] = '\0';	// Add the null terminator in the end of the string
+			result = strcmp(compare1, compare2);	// Compare the 2 strings
+			if (result < 0)
+				printf("\'%s\' string is less than '%s\'\n", compare1, compare2);
+			else if (result == 0)
+				printf("\'%s\' string is equal to '%s\'\n", compare1, compare2);
+			else
+				printf("\'%s\' string is greater than '%s\'\n", compare1, compare2);
+		}
+	} while (strcmp(compare1, "q") != 0);			// Continue while user doesn't want to quit
+	printf("*** End of Comparing Strings Demo ***\n\n");
 }
