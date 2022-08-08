@@ -41,7 +41,7 @@ void manipulating(void) {
 	do {
 		printf("Type the 1st string to compare (q - to quit):\n");
 		fgets(compare1, BUFFER_SIZE, stdin);	// Get the 1st string input
-		compare1(strlen(compare1) - 1) = '\0';	// Add the null terminator in the end of the string
+		compare1[strlen(compare1) - 1] = '\0';	// Add the null terminator in the end of the string
 		if (strcmp(compare1, "q") != 0) {		// Check if the user wants to exit the program
 			printf("Type the 2nd string to compare:\n");
 			fgets(compare2, BUFFER_SIZE, stdin);	// Get the 2nd string input
