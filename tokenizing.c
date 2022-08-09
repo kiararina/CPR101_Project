@@ -12,11 +12,9 @@ Purpose: [This function takes a user inputted string and tokenizes it]
 
 
 
+void tokenizing(void) {
 
-/*
-// V1
-//void tokenizing(void) {
-
+    // V1
     printf("*** Start of Tokenizing Words Demo ***\n");
     char words[BUFFER_SIZE];
     char* nextWord = NULL;
@@ -24,7 +22,7 @@ Purpose: [This function takes a user inputted string and tokenizes it]
     do {
         printf("Type a few words seperated by space (q - to quit):\n");
 
-        fgets(words, BUFFER_SIZE, stdin); 
+        fgets(words, BUFFER_SIZE, stdin);
         words[strlen(words) - 1] = '\0'; // replaces the new line at the end of the string with null to indicate when the string ends
 
         if (strcmp(words, "q") != 0) { // only executes if user did not input 'q'
@@ -33,21 +31,17 @@ Purpose: [This function takes a user inputted string and tokenizes it]
 
     //  use a loop to print out the string, while incrementing wordsCounter to keep track of the number of words being tokenized 
             while (nextWord) {
-                printf("Word #%d is \'%s\'\n", wordsCounter++, nextWord); 
+                printf("Word #%d is \'%s\'\n", wordsCounter++, nextWord);
                 nextWord = strtok(NULL, " "); // when the next value of the string reads as null, we break out of the loop* /
             }
-       }
+        }
     } while (strcmp(words, "q") != 0); // breaks the loop if user inputs 'q' as the only character
 
     printf("*** End of Tokenizing Words Demo ***\n\n");
-}
-*/
 
 
-// V2
-/* Did not modify the logic, but changed the delimiter from a single empty space(" ") to a single comma(",") */
-void tokenizing(void) {
-
+    // V2
+    /* Did not modify the logic, but changed the delimiter from a single empty space(" ") to a single comma(",") */
     printf("*** Start of Tokenizing Words Demo ***\n");
     char phrases[BUFFER_SIZE];
     char* nextPhrase = NULL;
