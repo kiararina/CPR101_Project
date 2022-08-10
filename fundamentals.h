@@ -7,6 +7,6 @@
 #include <string.h>
 
 //Takes non-empty string and a number as input and gives the character at that number(index) as output. 
-void main(void);
+void fundamentals(void);
 
 #endif

@@ -11,9 +11,7 @@ Purpose: Takes non-empty string and a number as input and gives the character at
 #define NUM_INPUT_SIZE 10 
 #include "fundamentals.h"
 
-
-void main(void) {
-
+void fundamentals(void) {
 // V1
     printf("*** start of Indexing Strings Demo ***\n"); 
     char buffer1[BUFFER_SIZE]; 
@@ -41,8 +39,6 @@ void main(void) {
     } while (strcmp (buffer1, "q") != 0); //Loops till user enters 'q'
     printf("*** End of Indexing Strings Demo ***\n\n");
 
-
-
     // V2 
     printf("*** Start of Measuring Strings Demo ***\n"); 
     char buffer2[BUFFER_SIZE]; 
@@ -59,5 +55,3 @@ void main(void) {
         
         printf("*** End of Measuring Strings Demo ***\n\n");
 }
-
- 
