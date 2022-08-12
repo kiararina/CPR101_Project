@@ -5,7 +5,7 @@ Purpose: [This function takes a user inputted string and tokenizes it]
 */
 
 
-// TOKENIZING MODULE SOURCE
+//TOKENIZING MODULE SOURCE
 #define _CRT_SECURE_NO_WARNINGS
 #define BUFFER_SIZE 300
 #include "tokenizing.h"
