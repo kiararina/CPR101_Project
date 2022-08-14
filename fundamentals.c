@@ -48,10 +48,38 @@ void fundamentals(void) {
         buffer2[strlen(buffer2) - 1] = '\0'; // Replaces user entered newline with null terminator 
 
         // checks if entered string is not equals to 'q'.
-        if (strcmp(buffer2, "q") != 0) 
+        if (strcmp(buffer2, "q") != 0) {
             printf("The length of \'%s\' is %d characters\n", 
             buffer2, (int)strlen(buffer2)); 
-        } while (strcmp(buffer2, "q") != 0); //Loops till user enters 'q'
-        
-        printf("*** End of Measuring Strings Demo ***\n\n");
+        }
+    } while (strcmp(buffer2, "q") != 0); //Loops till user enters 'q'
+    printf("*** End of Measuring Strings Demo ***\n\n");
+
+
+    
+    //V3
+    printf("*** start of copying Strings Demo ***\n"); 
+    char destination [BUFFER_SIZE]; 
+    char source[BUFFER_SIZE]; 
+    do {
+
+        //Replaces first element of destination with null terminator
+        destination [0] = '\0'; 
+
+        printf("Destination string is reset to empty\n"); 
+        printf("Type the source string (q - to quit): \n"); 
+        fgets (source, BUFFER_SIZE, stdin);
+
+        //Replaces user entered new line with null terminator
+        source[strlen (source) - 1] = '\0'; 
+
+        if (strcmp (source, "q") != 0) {
+
+            //copies string from source to destination
+            strcpy (destination, source); 
+            printf("New destination string is \'%s\'\n", destination);
+        }
+        //loops till user enter q
+    } while (strcmp (source, "q") != 0); 
+    printf("*** End of copying Strings Demo ***\n\n");
 }
