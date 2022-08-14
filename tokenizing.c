@@ -50,7 +50,7 @@ void tokenizing(void) {
     do {
         printf("Type a few words seperated by comma (q - to quit):\n");
 
-        fgets(phrases, BUFFER_SIZE, stdin); 
+        fgets(phrases, BUFFER_SIZE, stdin);
         phrases[strlen(phrases) - 1] = '\0'; // replaces the new line at the end of the string with null to indicate when the string ends
 
         if ((strcmp(phrases, "q") != 0)) { // only executes if user did not input 'q'
@@ -59,7 +59,7 @@ void tokenizing(void) {
 
     //  use a loop to print out the string, while incrementing phrasesCounter to keep track of the number of phrases being tokenized 
             while (nextPhrase) {
-                printf("Word #%d is \'%s\'\n", phrasesCounter++, nextPhrase); 
+                printf("Phrase #%d is \'%s\'\n", phrasesCounter++, nextPhrase);
                 nextPhrase = strtok(NULL, ","); // when the next value of the string reads as null, we break out of the loop
             }
         }
@@ -71,28 +71,28 @@ void tokenizing(void) {
 
 
     // V3
-    /* Delimiter is now a single period (".") */
+    /* Delimiter is now a single dot (".") */
     printf("*** Start of Tokenizing Sentences Demo ***\n");
     char sentences[BUFFER_SIZE];
     char* nextSentence = NULL;
     int sentencesCounter;
     do {
-        printf("Type a few words seperated by comma (q - to quit):\n");
+        printf("Type a few words seperated by dot (q - to quit):\n");
 
-        fgets(sentences, BUFFER_SIZE, stdin); 
+        fgets(sentences, BUFFER_SIZE, stdin);
         sentences[strlen(sentences) - 1] = '\0'; // replaces the new line at the end of the string with null to indicate when the string ends
 
         if ((strcmp(sentences, "q") != 0)) { // only executes if user did not input 'q'
-            nextSentence = strtok(sentences, "."); // use a period as the delimiter to know when to split the string into tokens
+            nextSentence = strtok(sentences, "."); // use a dot as the delimiter to know when to split the string into tokens
             sentencesCounter = 1; // intialize sentencesCounter to 1, and start counting from 1 to keep track of how many sentences are being tokenized
 
     //  use a loop to print out the string, while incrementing phrasesCounter to keep track of the number of sentences being tokenized 
             while (nextSentence) {
-                printf("Word #%d is \'%s\'\n", sentencesCounter++, nextSentence); 
+                printf("Sentence #%d is \'%s\'\n", sentencesCounter++, nextSentence);
                 nextSentence = strtok(NULL, "."); // when the next value of the string reads as null, we break out of the loop
             }
         }
-    } while (strcmp(phrases, "q") != 0); // breaks the loop if user inputs 'q' as the only character
+    } while (strcmp(sentences, "q") != 0); // breaks the loop if user inputs 'q' as the only character
 
     printf("*** End of Tokenizing Sentences Demo ***\n\n");
 
