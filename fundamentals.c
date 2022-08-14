@@ -83,8 +83,3 @@ void fundamentals(void) {
     } while (strcmp (source, "q") != 0); 
     printf("*** End of copying Strings Demo ***\n\n");
 }
-
-        } while (strcmp(buffer2, "q") != 0); //Loops till user enters 'q'
-        
-        printf("*** End of Measuring Strings Demo ***\n\n");
-}
