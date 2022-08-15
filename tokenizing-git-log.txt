@@ -904,9 +904,9 @@ index 0000000..07d1cd7
 +Comments are for programmers who will maintain the code in the future. 
 +Comments are read only by IT professionals who may very well know the language better than you. You don't need to explain the code. If they want to know how the code works, they will read the code. Most of the time, they want to know IF this is the source file they should be working on, the purpose of the program in general, what service that a function provides, and in the case of individual structures (a loop, a series of nested IF  -  ELSE), what the structure accomplishes.
 +Comments should be brief and informative. One or two phrases takes one or two seconds to read. A few lines of code can take minutes to analyse, compile in one's head, imagine a walkthrough, check the results, and still not be understand completely.
-+--------------------------------------------------------------------------------
++---------------------------------------------------------------------------------
 +Without good comments, the code is neither acceptable nor economically maintainable in a professional environment.
-+--------------------------------------------------------------------------------
++---------------------------------------------------------------------------------
 +
 +Organisation of Comments
 +Program comments 
