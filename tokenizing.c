@@ -19,7 +19,7 @@ void tokenizing(void) {
     char* nextWord = NULL;
     int wordsCounter;
     do {
-        printf("Type a few words seperated by space (q - to quit):\n");
+        printf("Type a few words separated by space (q - to quit):\n");
 
         fgets(words, BUFFER_SIZE, stdin);
         words[strlen(words) - 1] = '\0'; // replaces the new line at the end of the string with null to indicate when the string ends
@@ -48,7 +48,7 @@ void tokenizing(void) {
     char* nextPhrase = NULL;
     int phrasesCounter;
     do {
-        printf("Type a few words seperated by comma (q - to quit):\n");
+        printf("Type a few phrases separated by comma (q - to quit):\n");
 
         fgets(phrases, BUFFER_SIZE, stdin);
         phrases[strlen(phrases) - 1] = '\0'; // replaces the new line at the end of the string with null to indicate when the string ends
@@ -77,7 +77,7 @@ void tokenizing(void) {
     char* nextSentence = NULL;
     int sentencesCounter;
     do {
-        printf("Type a few words seperated by dot (q - to quit):\n");
+        printf("Type a few sentences separated by dot (q - to quit):\n");
 
         fgets(sentences, BUFFER_SIZE, stdin);
         sentences[strlen(sentences) - 1] = '\0'; // replaces the new line at the end of the string with null to indicate when the string ends

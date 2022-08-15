@@ -31,7 +31,7 @@ void manipulating(void) {
 		}
 	} while (strcmp(string1, "q") != 0);		// Repeat input as long as input is not equal to "quit"
 
-	printf("*** End of Concatenating Strings Demo ***\n");
+	printf("*** End of Concatenating Strings Demo ***\n\n");
 
 //V2
 	printf("*** Start of Comparing Strings Demo ***\n");
