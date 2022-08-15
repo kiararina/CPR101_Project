@@ -58,7 +58,7 @@ void fundamentals(void) {
 
     
     //V3
-    printf("*** start of copying Strings Demo ***\n"); 
+    printf("*** Start of Copying Strings Demo ***\n"); 
     char destination [BUFFER_SIZE]; 
     char source[BUFFER_SIZE]; 
     do {
@@ -81,5 +81,5 @@ void fundamentals(void) {
         }
         //loops till user enter q
     } while (strcmp (source, "q") != 0); 
-    printf("*** End of copying Strings Demo ***\n\n");
+    printf("*** End of Copying Strings Demo ***\n\n");
 }
