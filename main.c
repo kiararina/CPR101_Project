@@ -1,6 +1,6 @@
 // MAIN 
 /*
-Author: BB01, 03/08/2022, CPR101, Final Project
+Author: BB01, 03/08/2022, CPR101, Final Project V3
 main.c : MAIN
 Purpose: Main Function used to prompt user for which various options.
 */
